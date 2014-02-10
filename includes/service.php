@@ -48,7 +48,7 @@ class SData extends Service{
 	public function CURL_login(){
 		/*form has been posted, lets loggin*/
 		$logged_in = false;
-		if($this->request($data=array('user'=>'wad3','pass'=>'1997xf11')))
+		if($this->request($data=array('user'=>'','pass'=>'')))
 		return true;
 	}
 }
