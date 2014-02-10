@@ -1,41 +1,69 @@
 <?php
 	error_reporting(E_ALL);
 	ini_set('display_errors', 1);
-	require_once('service.php');
-	
-	$obj = new State_data();
-	
-	$obj->get_data();
-	
+	require_once('includes/service.php');
+	require_once('includes/mysql.php');
+	require_once('includes/conn.php');
+	require_once('includes/constants.php');
+	session_start();
+	$obj = new SData();
 ?>
-<aside class="minigreen">
-	<h3>Log into Moodle</h3>
-	<div class="minigreen_body"><div style="display:block;" class="loginbox" id="div_njit">
-    <form name="loginForm" action="https://moodleauth00.njit.edu/cpip_serv/login.aspx?esname=moodle" method="post" id="loginForm">
-        <div><input name="__VIEWSTATE" type="hidden" value="/wEPDwUJNDIzOTY1MjU5ZGQdLVY+81xpmN0ATE7y41EHAhVaCA==" id="__VIEWSTATE" /></div>
-        <table style="margin-top:5px;margin-bottom:5px;border-spacing:0px;" id="tablenoBorder">
-            <tr>
-                <td width="100px" style="text-align:left"><strong>UCID:</strong></td>
-            </tr>
-            <tr>
-                <td><input name="txtUCID" type="text" style="width:168px;" id="txtUCID" /></td>
-            </tr>
-            <tr>
-                <td width="100px" style="text-align:left"><strong>Password:</strong></td>
-            </tr>
-            <tr>
-                <td><input name="txtPasswd" type="password" style="width:168px;" id="txtPasswd" /></td>
-            </tr>
-            <tr>
-                <td style="text-align:center"><input name="btnLogin" type="submit" value="Login" id="btnLogin" /></td>
-            </tr>
-        </table>
-    <div><input name="__EVENTVALIDATION" type="hidden" value="/wEWBAK7zbGBDQLr9O+IBwK01ba+BAKC3IeGDOn1GTxupWw9xfJhOXrBSFX6INdC" id="__EVENTVALIDATION" /></div>
-    </form>
-</div>
-<a href="/moodle/non-credit.php" target="_blank">Login without an NJIT UCID</a><br /><br /><a href="http://online.njit.edu/moodle/" target="_blank">Continuing Professional Education</a>
-<div><input name="testcookies" type="hidden" value="1" /></div>
-</div>
-</aside>
+<?php include('templates/header.php'); ?>
 
+
+
+ <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php include('templates/footer.php'); ?>
+	
+	
+	
+	
+	
+	
 	
