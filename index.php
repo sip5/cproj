@@ -1,12 +1,11 @@
 <?php
+	header('Location: login.php');
 	error_reporting(E_ALL);
 	ini_set('display_errors', 1);
 	require_once('includes/service.php');
 	require_once('includes/mysql.php');
 	require_once('includes/conn.php');
 	require_once('includes/constants.php');
-	session_start();
-	$obj = new SData();
 ?>
 <?php include('templates/header.php'); ?>
 

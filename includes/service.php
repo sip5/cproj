@@ -12,7 +12,7 @@ class Service{
 	}
 	protected function request($data = array()){
 		if(!is_array($data))
-			return array();
+			return false;
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, "https://cp4.njit.edu/cp/home/login");
 		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array(
@@ -45,10 +45,16 @@ class SData extends Service{
 		
 	}
 	
-	public function CURL_login(){
+	public function CURL_login($ucid='', $password=''){
 		/*form has been posted, lets loggin*/
+		if(empty($ucid) || empty($password))
+			return false;
+			
 		$logged_in = false;
-		if($this->request($data=array('user'=>'','pass'=>'')))
-		return true;
+		$data = array('user'=>$ucid,'pass'=>$password);
+		if($this->request($data))
+			return true;
+		
+		return false;
 	}
 }

@@ -37,18 +37,42 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/~wad3"><?php echo "CS490 PROJECT";?></a>
+          <a class="navbar-brand" href="/~wad3/profile.php"><?php echo "CS490 PROJECT";?></a>
         </div>
         <div class="navbar-collapse collapse">
+         <?php if(!isset($_COOKIE['ucid'])): ?> 
           <form class="navbar-form navbar-right" role="form" method="post" action="login.php">
             <div class="form-group">
-              <input type="text" id="email" name="email" placeholder="Email" class="form-control">
+              <input type="text" id="ucid" name="ucid" placeholder="ucid" class="form-control" placeholder="UCID">
             </div>
             <div class="form-group">
               <input type="password" id="password" name="password" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+            <button type="submit" class="btn btn-primary">Sign in</button>
           </form>
+          <?php else: ?>
+          	<ul class="nav navbar-nav">
+	            <li class="active"><a href="#">Home</a></li>
+	        </ul>
+          <ul class="nav navbar-nav navbar-right">
+            	<li class="dropdown">
+	              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
+	              <ul class="dropdown-menu">
+	                <li><a href="profile.php">My Profile</a></li>
+	                <li><a href="profile.php?action=save">Update My Account</a></li>
+	                <li class="divider"></li>
+	                <li><a href="logout.php">Logout</a></li>
+	                
+	              </ul>
+	            </li>
+            
+          </ul>
+          	
+          	
+          	
+          	
+         <?php endif; ?>
+          
         </div><!--/.navbar-collapse -->
       </div>
     </div>
