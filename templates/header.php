@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../~wad3/assets/ico/favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>CS490 Project 2014</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../~wad3/assets/css/bootstrap.min.css" rel="stylesheet">
